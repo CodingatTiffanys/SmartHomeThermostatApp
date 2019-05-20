@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
+    <children>
+        <RadioButton layoutX="188.0" layoutY="46.0" mnemonicParsing="false" text="Fahrenheit" />
+        <RadioButton layoutX="188.0" layoutY="80.0" mnemonicParsing="false" text="Celcius" />
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="188.0" text="Current Inside Temperature" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="currentTempTextArea" alignment="CENTER" layoutX="22.0" layoutY="34.0" prefHeight="82.0" prefWidth="159.0" text="73.4">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </TextField>
+        <Button layoutX="495.0" layoutY="16.0" mnemonicParsing="false" onAction="#fanButtonClicked" prefHeight="36.0" prefWidth="69.0" text="Fan" />
+        <Button layoutX="495.0" layoutY="55.0" mnemonicParsing="false" onAction="#autoButtonClicked" prefHeight="27.0" prefWidth="69.0" text="Auto" />
+        <TextField fx:id="currentInsideRelativeHumidityTextArea" alignment="CENTER" layoutX="22.0" layoutY="161.0" prefHeight="82.0" prefWidth="159.0" text="37%">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="11.0" layoutY="143.0" prefHeight="18.0" prefWidth="212.0" text="Current Inside Relative Humidity" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="currentSetting" alignment="CENTER" layoutX="22.0" layoutY="285.0" prefHeight="92.0" prefWidth="159.0" text="72.0">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="11.0" layoutY="266.0" prefHeight="18.0" prefWidth="119.0" text="Current Setting" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="upButtonClicked" contentDisplay="CENTER" graphicTextGap="7.0" layoutX="188.0" layoutY="287.0" mnemonicParsing="false" onAction="#changeTemp" prefHeight="35.0" prefWidth="44.0" text="^">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="downButtonClicked" layoutX="188.0" layoutY="331.0" mnemonicParsing="false" onAction="#changeTemp" prefHeight="27.0" prefWidth="44.0" text="v">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <TextField fx:id="timeofDay" alignment="CENTER" layoutX="306.0" layoutY="219.0" prefHeight="68.0" prefWidth="257.0" text="7:30am">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="300.0" layoutY="198.0" prefHeight="18.0" prefWidth="105.0" text="Current Time" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Label>
+        <Button layoutX="495.0" layoutY="108.0" mnemonicParsing="false" onAction="#systemButtonClicked" prefHeight="36.0" prefWidth="69.0" text="System" />
+        <Button layoutX="495.0" layoutY="148.0" mnemonicParsing="false" onAction="#coolButtonClicked" prefHeight="27.0" prefWidth="69.0" text="Cool" />
+        <Button fx:id="programButton" layoutX="249.0" layoutY="326.0" mnemonicParsing="false" onAction="#programButtonClicked" prefHeight="45.0" prefWidth="140.0" text="Program">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
